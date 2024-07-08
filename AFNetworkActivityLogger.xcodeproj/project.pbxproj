@@ -136,6 +136,7 @@
 		29D96E911BCC3F1D00F571A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29F28C291C1F2628006BD785 /* AFNetworkActivityLoggerTests tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFNetworkActivityLoggerTests tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F28C3C1C1F2C54006BD785 /* AFNetworkActivityLoggerTests OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFNetworkActivityLoggerTests OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A378A2E02C34BF84009F43B5 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +226,7 @@
 		29D96E5B1BCC34CD00F571A5 = {
 			isa = PBXGroup;
 			children = (
+				A378A2E02C34BF84009F43B5 /* Package.swift */,
 				29D77AD41BCC4DA8005B1EF5 /* Dependency */,
 				29D96E701BCC357B00F571A5 /* AFNetworkActivityLogger */,
 				29D96E8F1BCC3F1D00F571A5 /* Supporting Files */,
@@ -475,6 +477,7 @@
 					};
 					29D96E641BCC34CD00F571A5 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 1540;
 					};
 					29F28C281C1F2628006BD785 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -489,6 +492,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 29D96E5B1BCC34CD00F571A5;
@@ -991,6 +995,7 @@
 		29D96E6E1BCC34CD00F571A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1007,12 +1012,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alamofire.AFNetworkActivityLogger;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		29D96E6F1BCC34CD00F571A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1029,6 +1037,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alamofire.AFNetworkActivityLogger;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
